@@ -15,6 +15,7 @@ import (
 )
 
 type block struct {
+	icon  string
 	cmd   string
 	inSh  bool
 	upInt int
@@ -34,7 +35,15 @@ func (b *block) run() {
 		return
 	}
 
-	barBytesArr[b.pos] = bytes.TrimSpace(bytes.Split(outputBytes, []byte("\n"))[0])
+	outputBytes = bytes.Trim(outputBytes, "\r\n\t ")
+
+	var icon string
+
+	if b.icon != "" {
+		icon = " " + b.icon
+	}
+
+	barBytesArr[b.pos] = append(outputBytes, icon...)
 	updateChan <- struct{}{}
 }
 

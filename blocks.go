@@ -6,6 +6,6 @@ var (
 	cmdstropt = "-c"        // command string opt for shell
 
 	blocks = []block{
-		{cmd: "date +%H:%M", upInt: 60},
+		{icon: "", cmd: "date +%H:%M", upInt: 60},
 	}
 )
