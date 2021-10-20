@@ -27,4 +27,4 @@ else
     ICON=""
 fi
 
-printf "%s%% %s" "$CAP" "$ICON"
+printf "%s %s%%" "$ICON" "$CAP"

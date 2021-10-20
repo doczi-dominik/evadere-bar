@@ -40,10 +40,10 @@ func (b *block) run() {
 	var icon string
 
 	if b.icon != "" {
-		icon = " " + b.icon
+		icon = b.icon + " "
 	}
 
-	barBytesArr[b.pos] = append(outputBytes, icon...)
+	barBytesArr[b.pos] = append([]byte(icon), outputBytes...)
 	updateChan <- struct{}{}
 }
 
