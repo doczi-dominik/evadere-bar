@@ -4,27 +4,17 @@ CAP=$(cat "$BAT0/capacity")
 STAT=$(cat "$BAT0/status")
 
 if [ "$STAT" = "Charging" ]; then
-    ICON=""
-elif [ "$CAP" -lt "11" ]; then
-    ICON=""
+    ICON=""
 elif [ "$CAP" -lt "21" ]; then
-    ICON=""
-elif [ "$CAP" -lt "31" ]; then
-    ICON=""
+    ICON=""
 elif [ "$CAP" -lt "41" ]; then
-    ICON=""
-elif [ "$CAP" -lt "51" ]; then
-    ICON=""
+    ICON=""
 elif [ "$CAP" -lt "61" ]; then
-    ICON=""
-elif [ "$CAP" -lt "71" ]; then
-    ICON=""
+    ICON=""
 elif [ "$CAP" -lt "81" ]; then
-    ICON=""
-elif [ "$CAP" -lt "91" ]; then
-    ICON=""
+    ICON=""
 else
-    ICON=""
+    ICON=""
 fi
 
 printf "%s %s%%" "$ICON" "$CAP"
