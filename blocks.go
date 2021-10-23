@@ -6,6 +6,7 @@ var (
 	cmdstropt = "-c"          // command string opt for shell
 
 	blocks = []block{
+		{icon: "", cmd: "checkupdates+aur | wc -l", upSig: 3, upInt: 1800, inSh: true},
 		{cmd: "$BARSCRIPTS/volume.sh", upSig: 1, inSh: true},
 		{cmd: "$BARSCRIPTS/network.sh", upInt: 10, inSh: true},
 		{icon: "", cmd: `printf "%.0f%%\n" "$(light -G)"`, upSig: 2, inSh: true},
