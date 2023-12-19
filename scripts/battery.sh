@@ -7,6 +7,7 @@ if [ "$STAT" = "Charging" ]; then
     ICON=""
 elif [ "$CAP" -lt "21" ]; then
     ICON=""
+    notify-send "CHARGE THAT SHIT"
 elif [ "$CAP" -lt "41" ]; then
     ICON=""
 elif [ "$CAP" -lt "61" ]; then
