@@ -6,16 +6,16 @@ STAT=$(cat "$BAT0/status")
 if [ "$STAT" = "Charging" ]; then
     ICON=""
 elif [ "$CAP" -lt "21" ]; then
-    ICON=""
+    ICON="󰁺"
     notify-send "CHARGE THAT SHIT"
 elif [ "$CAP" -lt "41" ]; then
-    ICON=""
+    ICON="󰁼"
 elif [ "$CAP" -lt "61" ]; then
-    ICON=""
+    ICON="󰁾"
 elif [ "$CAP" -lt "81" ]; then
-    ICON=""
+    ICON="󰂀"
 else
-    ICON=""
+    ICON="󰁹"
 fi
 
 printf "%s %s%%" "$ICON" "$CAP"
